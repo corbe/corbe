@@ -8,12 +8,6 @@
     </filter>
     <filter id="proj-glow-1" x="-80%" y="-80%" width="260%" height="260%">
       <feGaussianBlur stdDeviation="4" in="SourceGraphic" result="blur"/>
-      <feFlood flood-color="#ffb020" flood-opacity="0.6" result="color"/>
-      <feComposite in="color" in2="blur" operator="in" result="glow"/>
-      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="proj-glow-2" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="4" in="SourceGraphic" result="blur"/>
       <feFlood flood-color="#00d4ff" flood-opacity="0.6" result="color"/>
       <feComposite in="color" in2="blur" operator="in" result="glow"/>
       <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -26,9 +20,8 @@
       <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.4"/>
     </linearGradient>
-    <clipPath id="card-clip-0"><rect x="32.5" y="55" width="240" height="155" rx="8" ry="8"/></clipPath>
-    <clipPath id="card-clip-1"><rect x="305.0" y="55" width="240" height="155" rx="8" ry="8"/></clipPath>
-    <clipPath id="card-clip-2"><rect x="577.5" y="55" width="240" height="155" rx="8" ry="8"/></clipPath>
+    <clipPath id="card-clip-0"><rect x="123" y="55" width="240" height="155" rx="8" ry="8"/></clipPath>
+    <clipPath id="card-clip-1"><rect x="487" y="55" width="240" height="155" rx="8" ry="8"/></clipPath>
     <style>
       @keyframes twinkle { 0%, 100% { opacity: 0.1; } 50% { opacity: 0.6; } }
       @keyframes orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -46,73 +39,52 @@
   <text x="30" y="38" fill="#64748b" font-size="11" font-family="monospace" letter-spacing="3">FEATURED PROJECTS</text>
 
   <!-- Constellation dots -->
-  <circle cx="152" cy="165" r="2" fill="#a78bfa" opacity="0.4">
+  <circle cx="243" cy="165" r="2" fill="#a78bfa" opacity="0.4">
     <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="425" cy="165" r="2" fill="#ffb020" opacity="0.4">
+  <circle cx="607" cy="165" r="2" fill="#00d4ff" opacity="0.4">
     <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.5s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="697" cy="165" r="2" fill="#00d4ff" opacity="0.4">
-    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite"/>
-  </circle>
 
-  <!-- Constellation lines -->
-  <line x1="152" y1="165" x2="425" y2="165" stroke="url(#conn-grad)" stroke-width="0.5"/>
-  <line x1="425" y1="165" x2="697" y2="165" stroke="url(#conn-grad)" stroke-width="0.5"/>
+  <!-- Constellation line -->
+  <line x1="243" y1="165" x2="607" y2="165" stroke="url(#conn-grad)" stroke-width="0.5"/>
 
-  <!-- Card 1: farms -->
+  <!-- Card 1: nutsclub -->
   <g style="animation: card-appear 0.6s ease-out 0.1s both;">
     <g clip-path="url(#card-clip-0)">
-      <rect x="32.5" y="55" width="240" height="155" rx="8" ry="8" fill="url(#card-bg)" stroke="#1a2332" stroke-width="1"/>
-      <circle cx="50" cy="75" r="14" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.6"/>
-      <text x="50" y="79" text-anchor="middle" fill="#a78bfa" font-size="12" font-family="sans-serif" font-weight="bold" filter="url(#proj-glow-0)">N</text>
-      <text x="72" y="79" fill="#f1f5f9" font-size="12" font-family="sans-serif" font-weight="bold">nutsclub</text>
-      <text x="72" y="93" fill="#10b981" font-size="8" font-family="monospace">PHP</text>
+      <rect x="123" y="55" width="240" height="155" rx="8" ry="8" fill="url(#card-bg)" stroke="#1a2332" stroke-width="1"/>
+      <circle cx="140.5" cy="75" r="14" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.6"/>
+      <text x="140.5" y="79" text-anchor="middle" fill="#a78bfa" font-size="12" font-family="sans-serif" font-weight="bold" filter="url(#proj-glow-0)">N</text>
+      <text x="162.5" y="79" fill="#f1f5f9" font-size="12" font-family="sans-serif" font-weight="bold">nutsclub</text>
+      <text x="162.5" y="93" fill="#10b981" font-size="8" font-family="monospace">PHP</text>
     </g>
     <!-- Description -->
-    <text x="50" y="115" fill="#94a3b8" font-size="9" font-family="sans-serif">
-      <tspan x="50" dy="0">Nuts Poker - Mesa de poker</tspan>
-      <tspan x="50" dy="14">online. WordPress theme com</tspan>
-      <tspan x="50" dy="14">docker, paleta premium e i18n.</tspan>
+    <text x="140.5" y="115" fill="#94a3b8" font-size="9" font-family="sans-serif">
+      <tspan x="140.5" dy="0">Nuts Poker - Online poker</tspan>
+      <tspan x="140.5" dy="14">table. WordPress theme with</tspan>
+      <tspan x="140.5" dy="14">Docker, premium palette, i18n.</tspan>
     </text>
     <!-- Footer stats -->
-    <text x="50" y="195" fill="#64748b" font-size="8" font-family="monospace">101 commits</text>
-    <circle cx="255" cy="74" r="4" fill="#a78bfa" opacity="0.3">
+    <text x="140.5" y="195" fill="#64748b" font-size="8" font-family="monospace">101 commits</text>
+    <circle cx="346" cy="74" r="4" fill="#a78bfa" opacity="0.3">
       <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Card 2: gleam-draw -->
+  <!-- Card 2: cleancopy -->
   <g style="animation: card-appear 0.6s ease-out 0.3s both;">
     <g clip-path="url(#card-clip-1)">
-      <rect x="305.0" y="55" width="240" height="155" rx="8" ry="8" fill="url(#card-bg)" stroke="#1a2332" stroke-width="1"/>
-      <circle cx="322.5" cy="75" r="14" fill="none" stroke="#ffb020" stroke-width="1.5" opacity="0.6"/>
-      <text x="322.5" y="79" text-anchor="middle" fill="#ffb020" font-size="12" font-family="sans-serif" font-weight="bold" filter="url(#proj-glow-1)">G</text>
-      <text x="344.5" y="79" fill="#f1f5f9" font-size="12" font-family="sans-serif" font-weight="bold">gleam-draw</text>
-      <text x="344.5" y="93" fill="#3178c6" font-size="8" font-family="monospace">TypeScript · React</text>
+      <rect x="487" y="55" width="240" height="155" rx="8" ry="8" fill="url(#card-bg)" stroke="#1a2332" stroke-width="1"/>
+      <circle cx="504.5" cy="75" r="14" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.6"/>
+      <text x="504.5" y="79" text-anchor="middle" fill="#00d4ff" font-size="12" font-family="sans-serif" font-weight="bold" filter="url(#proj-glow-1)">C</text>
+      <text x="526.5" y="79" fill="#f1f5f9" font-size="12" font-family="sans-serif" font-weight="bold">cleancopy</text>
+      <text x="526.5" y="93" fill="#f1e05a" font-size="8" font-family="monospace">JavaScript</text>
     </g>
-    <text x="322.5" y="115" fill="#94a3b8" font-size="9" font-family="sans-serif">
-      <tspan x="322.5" dy="0">App React/Vite com Tailwind CSS.</tspan>
-      <tspan x="322.5" dy="14">Lovable-generated project com</tspan>
-      <tspan x="322.5" dy="14">TypeScript, bun, vitest.</tspan>
+    <text x="504.5" y="115" fill="#94a3b8" font-size="9" font-family="sans-serif">
+      <tspan x="504.5" dy="0">Chrome extension for clipboard</tspan>
+      <tspan x="504.5" dy="14">cleaning. i18n, analytics,</tspan>
+      <tspan x="504.5" dy="14">ready for Chrome Web Store.</tspan>
     </text>
-    <text x="322.5" y="195" fill="#64748b" font-size="8" font-family="monospace">8 commits</text>
-  </g>
-
-  <!-- Card 3: cleancopy -->
-  <g style="animation: card-appear 0.6s ease-out 0.5s both;">
-    <g clip-path="url(#card-clip-2)">
-      <rect x="577.5" y="55" width="240" height="155" rx="8" ry="8" fill="url(#card-bg)" stroke="#1a2332" stroke-width="1"/>
-      <circle cx="595" cy="75" r="14" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.6"/>
-      <text x="595" y="79" text-anchor="middle" fill="#00d4ff" font-size="12" font-family="sans-serif" font-weight="bold" filter="url(#proj-glow-2)">C</text>
-      <text x="617" y="79" fill="#f1f5f9" font-size="12" font-family="sans-serif" font-weight="bold">cleancopy</text>
-      <text x="617" y="93" fill="#f1e05a" font-size="8" font-family="monospace">JavaScript</text>
-    </g>
-    <text x="595" y="115" fill="#94a3b8" font-size="9" font-family="sans-serif">
-      <tspan x="595" dy="0">Chrome extension para limpeza</tspan>
-      <tspan x="595" dy="14">de clipboard. i18n, analytics,</tspan>
-      <tspan x="595" dy="14">pronto para Chrome Web Store.</tspan>
-    </text>
-    <text x="595" y="195" fill="#64748b" font-size="8" font-family="monospace">1 commit · Chrome extension</text>
+    <text x="504.5" y="195" fill="#64748b" font-size="8" font-family="monospace">1 commit · Chrome extension</text>
   </g>
 </svg>
