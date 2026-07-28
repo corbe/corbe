@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="280" viewBox="0 0 850 280">
+  <defs>
+    <style>
+      .star-bg  { animation: twinkle-slow 7s ease-in-out infinite; }
+      .star-mid { animation: twinkle-mid 5s ease-in-out infinite; }
+      .star-fg  { animation: twinkle-fast 3s ease-in-out infinite; }
+      @keyframes twinkle-slow { 0%, 100% { opacity: 0.08; } 50% { opacity: 0.3; } }
+      @keyframes twinkle-mid  { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.5; } }
+      @keyframes twinkle-fast { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+      .core-ring      { animation: pulse-core 3s ease-in-out infinite; }
+      .core-ring-inner { animation: pulse-core 3s ease-in-out infinite 1.5s; }
+      @keyframes pulse-core {
+        0%, 100% { stroke-opacity: 0.3; transform: scale(1); transform-origin: 425px 155px; }
+        50%      { stroke-opacity: 0.8; transform: scale(1.06); transform-origin: 425px 155px; }
+      }
+      .shooting-star { opacity: 0; animation: shoot linear infinite; }
+      @keyframes shoot {
+        0%   { opacity: 0; transform: translate(0,0); }
+        5%   { opacity: 0.9; }
+        15%  { opacity: 0.6; transform: translate(var(--tx), var(--ty)); }
+        20%  { opacity: 0; transform: translate(var(--tx), var(--ty)); }
+        100% { opacity: 0; }
+      }
+      .scan-line { animation: scan 4s ease-in-out infinite; }
+      @keyframes scan {
+        0%, 100% { transform: translateY(0); opacity: 0.1; }
+        50%      { transform: translateY(260px); opacity: 0.4; }
+      }
+    </style>
+    <filter id="nebula-outer"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="nebula-mid"><feGaussianBlur stdDeviation="30"/></filter>
+    <filter id="core-glow"><feGaussianBlur stdDeviation="8"/></filter>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050a14"/>
+      <stop offset="100%" stop-color="#0f1623"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="280" fill="url(#bg-grad)"/>
+
+  <!-- Nebulas -->
+  <circle cx="200" cy="140" r="120" fill="#a78bfa" opacity="0.04" filter="url(#nebula-outer)"/>
+  <circle cx="650" cy="140" r="120" fill="#00d4ff" opacity="0.04" filter="url(#nebula-outer)"/>
+  <circle cx="425" cy="155" r="80" fill="#ffb020" opacity="0.06" filter="url(#nebula-mid)"/>
+
+  <!-- Background stars -->
+  <g class="star-bg">
+    <circle cx="50" cy="30" r="1" fill="#fff"/>
+    <circle cx="120" cy="80" r="1.2" fill="#fff"/>
+    <circle cx="200" cy="45" r="0.8" fill="#fff"/>
+    <circle cx="310" cy="25" r="1" fill="#fff"/>
+    <circle cx="400" cy="60" r="0.9" fill="#fff"/>
+    <circle cx="500" cy="35" r="1.1" fill="#fff"/>
+    <circle cx="580" cy="70" r="0.8" fill="#fff"/>
+    <circle cx="680" cy="20" r="1.2" fill="#fff"/>
+    <circle cx="750" cy="55" r="0.9" fill="#fff"/>
+    <circle cx="810" cy="30" r="1" fill="#fff"/>
+    <circle cx="90" cy="200" r="0.8" fill="#fff"/>
+    <circle cx="170" cy="230" r="1" fill="#fff"/>
+    <circle cx="350" cy="210" r="0.9" fill="#fff"/>
+    <circle cx="550" cy="240" r="1.1" fill="#fff"/>
+    <circle cx="700" cy="200" r="0.8" fill="#fff"/>
+    <circle cx="780" cy="220" r="1" fill="#fff"/>
+  </g>
+
+  <!-- Mid stars -->
+  <g class="star-mid">
+    <circle cx="80" cy="100" r="1.5" fill="#00d4ff"/>
+    <circle cx="250" cy="130" r="1.3" fill="#a78bfa"/>
+    <circle cx="450" cy="110" r="1.4" fill="#ffb020"/>
+    <circle cx="600" cy="130" r="1.2" fill="#00d4ff"/>
+    <circle cx="720" cy="100" r="1.5" fill="#a78bfa"/>
+    <circle cx="150" cy="180" r="1.3" fill="#fff"/>
+    <circle cx="480" cy="190" r="1.4" fill="#fff"/>
+    <circle cx="650" cy="180" r="1.2" fill="#fff"/>
+  </g>
+
+  <!-- Foreground stars -->
+  <g class="star-fg">
+    <circle cx="160" cy="50" r="2" fill="#fff"/>
+    <circle cx="380" cy="40" r="2.2" fill="#00d4ff"/>
+    <circle cx="520" cy="90" r="2" fill="#fff"/>
+    <circle cx="680" cy="50" r="1.8" fill="#a78bfa"/>
+    <circle cx="300" cy="170" r="2" fill="#fff"/>
+    <circle cx="560" cy="160" r="2.1" fill="#ffb020"/>
+  </g>
+
+  <!-- Core (center logo area) -->
+  <circle cx="425" cy="155" r="4" fill="#00d4ff" filter="url(#core-glow)" opacity="0.8"/>
+  <circle cx="425" cy="155" r="15" fill="none" stroke="#00d4ff" stroke-width="1" class="core-ring" opacity="0.3"/>
+  <circle cx="425" cy="155" r="24" fill="none" stroke="#00d4ff" stroke-width="0.8" class="core-ring-inner" opacity="0.2"/>
+  <circle cx="425" cy="155" r="40" fill="none" stroke="#a78bfa" stroke-width="0.5" class="core-ring" opacity="0.15"/>
+
+  <!-- Orbital paths -->
+  <ellipse cx="425" cy="155" rx="100" ry="30" fill="none" stroke="#64748b" stroke-width="0.3" opacity="0.15" transform="rotate(-15,425,155)"/>
+  <ellipse cx="425" cy="155" rx="160" ry="45" fill="none" stroke="#64748b" stroke-width="0.3" opacity="0.1" transform="rotate(10,425,155)"/>
+
+  <!-- Shooting stars -->
+  <g class="shooting-star" style="--tx:-120px; --ty:80px; animation-delay: 2s; animation-duration: 6s;">
+    <line x1="750" y1="30" x2="710" y2="50" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="710" y1="50" x2="690" y2="60" stroke="#fff" stroke-width="0.5" stroke-linecap="round"/>
+  </g>
+  <g class="shooting-star" style="--tx:-100px; --ty:60px; animation-delay: 5s; animation-duration: 8s;">
+    <line x1="200" y1="20" x2="165" y2="40" stroke="#fff" stroke-width="1" stroke-linecap="round"/>
+    <line x1="165" y1="40" x2="150" y2="48" stroke="#fff" stroke-width="0.4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Scan line -->
+  <rect x="0" y="0" width="850" height="2" fill="#00d4ff" opacity="0.08" class="scan-line"/>
+
+  <!-- Title text -->
+  <text x="425" y="82" text-anchor="middle" fill="#f1f5f9" font-size="22" font-weight="bold" font-family="sans-serif" letter-spacing="4" opacity="0.9">CORBE</text>
+  <text x="425" y="105" text-anchor="middle" fill="#64748b" font-size="10" font-family="monospace" letter-spacing="6" opacity="0.7">GO BACKEND ENGINEER</text>
+
+  <!-- Subtitle -->
+  <text x="425" y="240" text-anchor="middle" fill="#64748b" font-size="9" font-family="monospace" letter-spacing="2" opacity="0.5">MONITORING · BACKEND · AI SYSTEMS</text>
+</svg>

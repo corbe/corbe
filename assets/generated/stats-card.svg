@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="180" viewBox="0 0 850 180">
+  <defs>
+    <style>
+      .metric-icon { animation: count-glow 4s ease-in-out infinite; }
+      @keyframes count-glow { 0%, 100% { fill-opacity: 0.7; } 50% { fill-opacity: 1; } }
+    </style>
+    <filter id="num-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Card background -->
+  <rect x="0.5" y="0.5" width="849" height="179" rx="12" ry="12"
+        fill="#0f1623" stroke="#1a2332" stroke-width="1"/>
+
+  <!-- Section title -->
+  <text x="30" y="38" fill="#64748b" font-size="11" font-family="monospace" letter-spacing="3">SYSTEM TELEMETRY</text>
+
+  <!-- Dividers -->
+  <line x1="170.0" y1="55" x2="170.0" y2="155" stroke="#1a2332" stroke-width="1" opacity="0.5"/>
+  <line x1="340.0" y1="55" x2="340.0" y2="155" stroke="#1a2332" stroke-width="1" opacity="0.5"/>
+  <line x1="510.0" y1="55" x2="510.0" y2="155" stroke="#1a2332" stroke-width="1" opacity="0.5"/>
+  <line x1="680.0" y1="55" x2="680.0" y2="155" stroke="#1a2332" stroke-width="1" opacity="0.5"/>
+
+  <!-- Metric 1: Repos -->
+  <g class="metric-cell" transform="translate(85.0, 95)">
+    <g transform="translate(-8, -30) scale(1)">
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="#00d4ff" class="metric-icon" style="animation-delay: 0.0s">
+        <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.5 2.5 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.5 2.5 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/>
+      </svg>
+    </g>
+    <text x="0" y="2" text-anchor="middle" fill="#00d4ff" font-size="28" font-weight="bold" font-family="sans-serif" opacity="0.35" filter="url(#num-glow)">8</text>
+    <text x="0" y="2" text-anchor="middle" fill="#f1f5f9" font-size="28" font-weight="bold" font-family="sans-serif">8</text>
+    <text x="0" y="20" text-anchor="middle" fill="#64748b" font-size="11" font-family="monospace" letter-spacing="1">Repos</text>
+  </g>
+
+  <!-- Metric 2: Contributions -->
+  <g class="metric-cell" transform="translate(255.0, 95)">
+    <g transform="translate(-8, -30) scale(1)">
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="#a78bfa" class="metric-icon" style="animation-delay: 0.3s">
+        <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm5.25-3.5a.75.75 0 0 0-.75.75v3.5c0 .218.094.424.256.566l2.5 2.25a.75.75 0 1 0 1.01-1.107L7 8.69V5.25a.75.75 0 0 0-.75-.75Z"/>
+      </svg>
+    </g>
+    <text x="0" y="2" text-anchor="middle" fill="#a78bfa" font-size="28" font-weight="bold" font-family="sans-serif" opacity="0.35" filter="url(#num-glow)">106</text>
+    <text x="0" y="2" text-anchor="middle" fill="#f1f5f9" font-size="28" font-weight="bold" font-family="sans-serif">106</text>
+    <text x="0" y="20" text-anchor="middle" fill="#64748b" font-size="11" font-family="monospace" letter-spacing="1">Contrib.</text>
+  </g>
+
+  <!-- Metric 3: Stars -->
+  <g class="metric-cell" transform="translate(425.0, 95)">
+    <g transform="translate(-8, -30) scale(1)">
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="#ffb020" class="metric-icon" style="animation-delay: 0.6s">
+        <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/>
+      </svg>
+    </g>
+    <text x="0" y="2" text-anchor="middle" fill="#ffb020" font-size="28" font-weight="bold" font-family="sans-serif" opacity="0.35" filter="url(#num-glow)">1</text>
+    <text x="0" y="2" text-anchor="middle" fill="#f1f5f9" font-size="28" font-weight="bold" font-family="sans-serif">1</text>
+    <text x="0" y="20" text-anchor="middle" fill="#64748b" font-size="11" font-family="monospace" letter-spacing="1">Stars</text>
+  </g>
+
+  <!-- Metric 4: Languages -->
+  <g class="metric-cell" transform="translate(595.0, 95)">
+    <g transform="translate(-8, -30) scale(1)">
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="#00d4ff" class="metric-icon" style="animation-delay: 0.9s">
+        <path d="M4.784 1.76a.75.75 0 0 1 .133 1.052L2.74 5.5l2.177 2.688a.75.75 0 0 1-1.185.92L1.162 6.163a.75.75 0 0 1 0-.92l2.57-3.35a.75.75 0 0 1 1.052-.133Zm6.432 0a.75.75 0 0 1 1.052.133l2.57 3.35a.75.75 0 0 1 0 .92l-2.57 3.35a.75.75 0 1 1-1.185-.92L13.259 5.5 11.083 2.812a.75.75 0 0 1 .133-1.052ZM8 1.382a.75.75 0 0 1 .634.392l3.5 6.5a.75.75 0 0 1-.221.884l-4 3.25a.75.75 0 0 1-.826 0l-4-3.25a.75.75 0 0 1-.221-.884l3.5-6.5A.75.75 0 0 1 8 1.382Zm0 2.022L5.98 6.5h4.04L8 3.404Z"/>
+      </svg>
+    </g>
+    <text x="0" y="2" text-anchor="middle" fill="#00d4ff" font-size="28" font-weight="bold" font-family="sans-serif" opacity="0.35" filter="url(#num-glow)">6</text>
+    <text x="0" y="2" text-anchor="middle" fill="#f1f5f9" font-size="28" font-weight="bold" font-family="sans-serif">6</text>
+    <text x="0" y="20" text-anchor="middle" fill="#64748b" font-size="11" font-family="monospace" letter-spacing="1">Langs</text>
+  </g>
+
+  <!-- Metric 5: Commits -->
+  <g class="metric-cell" transform="translate(765.0, 95)">
+    <g transform="translate(-8, -30) scale(1)">
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="#a78bfa" class="metric-icon" style="animation-delay: 1.2s">
+        <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1Zm0 2.5a4.5 4.5 0 0 1 4.473 4H14.5a.5.5 0 0 1 0 1h-2.027A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-4.473-4H1.5a.5.5 0 0 1 0-1h2.027A4.5 4.5 0 0 1 8 3.5Z"/>
+      </svg>
+    </g>
+    <text x="0" y="2" text-anchor="middle" fill="#a78bfa" font-size="28" font-weight="bold" font-family="sans-serif" opacity="0.35" filter="url(#num-glow)">140+</text>
+    <text x="0" y="2" text-anchor="middle" fill="#f1f5f9" font-size="28" font-weight="bold" font-family="sans-serif">140+</text>
+    <text x="0" y="20" text-anchor="middle" fill="#64748b" font-size="11" font-family="monospace" letter-spacing="1">Commits</text>
+  </g>
+</svg>
